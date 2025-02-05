@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+		}
+		svg {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<svg width="100%" height="100%">
+		<circle cx="50%" cy="50%" r="100" stroke="black" stroke-width="5" fill="white" />
+		<line x1="50%" y1="50%" stroke="black" stroke-width="5" stroke-linecap="round" id="line" />
+	</svg>
+	<script>
+		onmousemove = e => {
+			let x = e.clientX - innerWidth/2;
+			let y = e.clientY - innerHeight/2;
+			let len = Math.hypot(x, y) / 100;
+
+			line.setAttribute('x2', x/len + innerWidth/2);
+			line.setAttribute('y2', y/len + innerHeight/2);
+		}
+		onmousemove({clientX: 0, clientY: 0});
+	</script>
+</body>
+</html>

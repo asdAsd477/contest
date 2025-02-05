@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+		}
+		svg {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<svg id="svg"></svg>
+	<script>
+		let mouse = {x: 0, y: 0, dn: false}
+		onmousedown = e => {
+			mouse.dn = true;
+			mouse.x = e.clientX;
+			mouse.y = e.clientY;
+		}
+		onmouseup = () => mouse.dn = false;
+		onmousemove = e => {
+			if(mouse.dn && Math.hypot(mouse.x - e.clientX, mouse.y - e.clientY) > 10) {
+				svg.innerHTML += `<line x1="${mouse.x}" y1="${mouse.y}" x2="${e.clientX}" y2="${e.clientY}" stroke="green" stroke-width="5" stroke-linecap="round"  />`
+				mouse.x = e.clientX;
+				mouse.y = e.clientY;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 0}
+        canvas {display: block}
+    </style>
+</head>
+<body>
+    <canvas id="can"></canvas>
+    <script>
+        let w, h, ctx = can.getContext('2d');
+        let rnd = (min, max) => Math.random() * (max - min) + min;
+        onresize = () => {
+            w = can.width = innerWidth;
+            h = can.height = innerHeight;
+        }
+        onresize();
+
+        let circles = [...Array(rnd(15, 45) | 0)].map(() => ({
+            x: rnd(0, w),
+            y: rnd(0, h),
+
+            vx: rnd(-2, 2),
+            vy: rnd(-2, 2),
+
+            r: rnd(15, 45),
+
+            hover: false,
+        }));
+
+        let mouse = {x: 0, y: 0};
+        onmousemove = e => {
+            mouse = {x: e.clientX, y: e.clientY};
+        }
+
+        !function loop() {
+            // ctx.clearRect(0, 0, w, h);
+            ctx.fillStyle = "#fff3";
+            ctx.fillRect(0, 0, w, h);
+            
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "red";
+            circles.map(c => {
+                // hover
+                if(Math.hypot(c.x - mouse.x, c.y - mouse.y) < c.r) {
+                    if(!c.hover) {
+                        c.vx = rnd(-2, 2);
+                        c.vy = rnd(-2, 2);
+                        c.hover = true;
+                    }
+                } else {
+                    c.hover = false;
+                }
+
+                // move
+                c.x += c.vx;
+                c.y += c.vy;
+
+                // borders
+                // c.x = (c.x + w + 3*c.r) % (w + 2*c.r) - c.r;
+                if(c.x < -c.r) c.x = w + c.r;
+                if(c.x > w + c.r) c.x = -c.r;
+                
+                if(c.y < -c.r) c.y = h + c.r;
+                if(c.y > h + c.r) c.y = -c.r;
+                
+                // render
+                ctx.beginPath();
+                    ctx.arc(c.x, c.y, c.r, 0, Math.PI*2);
+                ctx.stroke();
+            });
+
+            requestAnimationFrame(loop);
+        }();
+    </script>
+</body>
+</html>

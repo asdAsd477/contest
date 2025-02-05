@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box}
+        html {background: #111}
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+
+            width: 300px;
+            height: 300px;
+
+            perspective: 500px;
+        }
+        .cube {
+            width: inherit;
+            height: inherit;
+
+            transform-style: preserve-3d;
+            animation: rotate 10s linear infinite;
+        }
+        .side {
+            position: absolute;
+
+            width: inherit;
+            height: inherit;
+
+            /* backface-visibility: hidden; */
+
+            /* font: 50px Arial;
+            line-height: 300px;
+            text-align: center;
+            color: white; */
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; /* чтобы сетка была квадратной, надо ещё rows контролировать! */
+            gap: 3px;
+
+            border: 3px solid white;
+            background: white;
+
+            animation: grid 1s ease-out infinite alternate;
+        }
+        .cell {
+            display: grid;
+            place-items: center;
+            
+            font: 30px Arial;
+            color: white;
+            background: #222;
+        }
+
+        .back {transform: rotateY(-180deg) translateZ(150px)}
+        .front {transform: rotateY(0deg) translateZ(150px)}
+        .left {transform: rotateY(-90deg) translateZ(150px)}
+        .right {transform: rotateY(90deg) translateZ(150px)}
+        .top {transform: rotateX(90deg) translateZ(150px)}
+        .bottom {transform: rotateX(-90deg) translateZ(150px)}
+
+        @keyframes rotate {
+            0% {transform: rotateX(-30deg) rotateY(0deg)}
+            100% {transform: rotateX(-30deg) rotateY(360deg)}
+        }
+        @keyframes grid {
+            0% {background: white}
+            100% {background: #222}
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="cube">
+            <div class="side back">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell">back</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="side front">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell">front</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="side left">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell">left</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="side right">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell">right</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="side top">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell">top</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="side bottom">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell">bottom</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

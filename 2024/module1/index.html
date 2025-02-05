@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Конкурс ПОПЫТКА</title>
+</head>
+<body>
+
+<header class="header">
+	<a class="logo" href="#">
+		<img width="50" src="https://img.freepik.com/free-vector/grass-gradient-illustration-flat-design_343694-2621.jpg?size=338&ext=jpg&ga=GA1.1.1292351815.1710028800&semt=ais" alt="">
+	</a>
+	<nav class="nav">
+		<ul class="nav__list">
+			<li class="nav__item"><a href="#" class="nav__link">Поиск</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Регистрация</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Личный кабинет</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Добавить</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main class="main">
+	<section class="section">
+		<h2 class="section__title">Недавно найденные животные:</h2>
+		<div class="slider">
+			<button class="slider__btn">&lt;</button>
+			<button class="slider__btn slider__btn--next">&gt;</button>
+			<div class="slider__indexing">
+				<span class="slider__index slider__index--active"></span>
+				<span class="slider__index"></span>
+				<span class="slider__index"></span>
+				<span class="slider__index"></span>
+			</div>
+
+			<div class="slider__content">
+
+				<div class="slider__item">
+					<img class="slider__img" src="https://media.kg-portal.ru/anime/s/swordartonline/images/swordartonline_162.jpg" alt="">
+					<h3 class="slider__title">Котик</h3>
+					<h3 class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nostrum consectetur, tempora ad exercitationem inventore impedit laudantium adipisci reprehenderit dicta repellat dolorum deserunt, alias quidem voluptates debitis possimus assumenda? In?</h3>
+					<button class="btn">Подробнее</button>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section">
+		<h2 class="section__title">Быстрый поиск:</h2>
+		<form class="form" action="">
+			<input class="input" type="text" name="type" list="typesOfAnimals" placeholder="Вид животного">
+			<datalist id="typesOfAnimals">
+				<option value="кошка"></option>
+				<option value="собака"></option>
+				<option value="хорёк"></option>
+				<option value="енот"></option>
+			</datalist>
+			<button class="btn">Поиск</button>
+		</form>
+	</section>
+
+
+	<section class="section">
+		<h2 class="section__title">Факты о компании:</h2>
+		<div class="inline-card-wrapper">
+			<div class="inline-card">
+				<img class="inline-card__img" src="https://www.kino-teatr.ru/news/14311/132779.jpg" alt="">
+				<h3 class="inline-card__title">Помогли найти более 500 животных</h3>
+			</div>
+			<div class="inline-card">
+				<h3 class="inline-card__title">Более трех лет способствуем возвращению питомцев к хозяевам</h3>
+				<img class="inline-card__img" src="https://tl.rulate.ru/i/addition/Book/163330/1633297/main_615a23664a012.jpg" alt="">
+			</div>
+			<div class="inline-card">
+				<img class="inline-card__img" src="https://hellaanime.eu.org/img/charters/Sword_Art_Online/Lizbeth.jpg" alt="">
+				<h3 class="inline-card__title">Все услуги оказываются бесплатно</h3>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section section--transparent">
+		<h2 class="section__title">Карточки:</h2>
+		<div class="cards">
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31833-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Зарегистрированный +7 123 456 78 90</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6437/e7b40c20d523ac6884b42f9c2356358acd82f2e3_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Зарегистрированный +7 123 456 78 90</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Зарегистрированный +7 123 456 78 90</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pa1.aminoapps.com/6381/7fdaf62de8381ffd7f891787e87badcc86707d73_00.gif" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Зарегистрированный +7 123 456 78 90</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31840-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Зарегистрированный +7 123 456 78 90</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="section">
+		<h2 class="section__title">Форма поиска:</h2>
+		<form class="form form--block" action="">
+			<input class="input" type="text" name="type" list="typesOfAnimals2" placeholder="Вид животного">
+			<datalist id="typesOfAnimals2">
+				<option value="кошка"></option>
+				<option value="собака"></option>
+				<option value="хорёк"></option>
+				<option value="енот"></option>
+			</datalist>
+			<select class="select" name="district">
+				<option disabled selected>Район</option>
+				<option value="d1">Дзержинский</option>
+				<option value="d2">Центральный</option>
+				<option value="d3">Промышленный</option>
+				<option value="d4">Ленинский</option>
+			</select>
+			<button class="btn">Поиск</button>
+		</form>
+	</section>
+
+	
+	<section class="section">
+		<h2 class="section__title">Отзывы:</h2>
+		<div class="slider">
+			<button class="slider__btn">&lt;</button>
+			<button class="slider__btn slider__btn--next">&gt;</button>
+			<div class="slider__indexing">
+				<span class="slider__index slider__index--active"></span>
+				<span class="slider__index"></span>
+				<span class="slider__index"></span>
+				<span class="slider__index"></span>
+			</div>
+
+			<div class="slider__content">
+
+				<div class="slider__item">
+					<img class="slider__img" src="https://i.redd.it/alc5fihnd6021.jpg" alt="">
+					<h3 class="slider__title">Иван Иванович</h3>
+					<h3 class="slider__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem doloremque cumque aliquid reprehenderit similique voluptas eum accusantium quisquam dolorem! Corrupti ad, ducimus tenetur nam dolor eius necessitatibus minus eligendi magni.</h3>
+					<time class="slider__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	
+	<section class="section">
+		<h2 class="section__title">Подпишитесь:</h2>
+		<form class="form form--block" action="">
+			<input class="input" type="email" name="email" placeholder="Email">
+			<label class="checkbox">
+				<input type="checkbox"> Я согласен на четотам
+			</label>
+			<button class="btn">Подписаться</button>
+		</form>
+	</section>
+
+
+
+	<!-- Страница входа в личный кабинет -->
+	<section class="section">
+		<h2 class="section__title">Вход:</h2>
+		<form class="form form--block" action="">
+			<input class="input" type="email" name="email" placeholder="Email">
+			<input class="input" type="password" name="password" placeholder="Password">
+			<button class="btn" type="submit">Вход</button>
+			<button class="btn">Восстановить пароль</button>
+		</form>
+	</section>
+
+
+	<!-- Страница регистрации в личном кабинете -->
+	<section class="section">
+		<h2 class="section__title">Регистрация:</h2>
+		<form class="form form--block" action="">
+			<input class="input" type="email" name="email" required placeholder="mail@gmail.com">
+
+			<input class="input" type="text" name="name" required placeholder="Иван">
+			<input class="input" type="text" name="surname" required placeholder="Дроздов">
+			<input class="input" type="text" name="phone" required placeholder="+7 123 456 78 90">
+
+			<input class="input" type="password" name="password" required placeholder="Password">
+			<input class="input input--invalid" type="password" name="passwordRep" required placeholder="Repeat password">
+			<label class="checkbox">
+				<input type="checkbox"> Я согласен на четотам
+			</label>
+
+			<button class="btn" type="submit">Регистрация</button>
+		</form>
+	</section>
+
+
+
+	<!-- Страница личного кабинета пользователя -->
+	<section class="section">
+		<h2 class="section__title">Настройки аккаунта</h2>
+
+		<form action="" class="form form--block form--grid">
+			<p>+7 123 456 78 90</p>
+			<button class="btn" type="button">Изменить</button>
+
+			<p>mail@email.com</p>
+			<button class="btn" type="button">Изменить</button>
+
+			<p>Добавленных объявлений</p>
+			<span>50</span>
+
+			<p>Вернувшиеся животные</p>
+			<span>48</span>
+
+			<p>Дата регистрации</p>
+			<span>2019-05-15</span>
+
+			<p>Дней на сайте</p>
+			<span>158</span>
+		</form>
+	</section>
+	<section class="section section--transparent">
+		<h2 class="section__title">✅ Активно:</h2>
+		<div class="cards cards--active">
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31833-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<button type="button" class="btn">Удалить</button>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6437/e7b40c20d523ac6884b42f9c2356358acd82f2e3_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<button type="button" class="btn">Удалить</button>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6437/e7b40c20d523ac6884b42f9c2356358acd82f2e3_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<button type="button" class="btn">Удалить</button>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="section section--transparent">
+		<h2 class="section__title">🛠️ На модерации:</h2>
+		<div class="cards cards--moderation">
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<button type="button" class="btn">Редактировать</button>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pa1.aminoapps.com/6381/7fdaf62de8381ffd7f891787e87badcc86707d73_00.gif" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<button type="button" class="btn">Редактировать</button>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31840-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<button type="button" class="btn">Редактировать</button>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="section section--transparent">
+		<h2 class="section__title">🔍 Найдено:</h2>
+		<div class="cards cards--found">
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pa1.aminoapps.com/6381/7fdaf62de8381ffd7f891787e87badcc86707d73_00.gif" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31840-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="section section--transparent">
+		<h2 class="section__title">📁 В архиве:</h2>
+		<div class="cards cards--archive">
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pa1.aminoapps.com/6381/7fdaf62de8381ffd7f891787e87badcc86707d73_00.gif" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31840-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	
+
+
+
+	<!-- Страница добавления информации о найденном животном -->
+	<section class="section">
+		<h2 class="section__title">Добавить информацию о найденном животном:</h2>
+		<form class="form form--block" action="">
+			<input class="input" type="text" name="phone" required placeholder="+7 123 456 78 90">
+			<input class="input input--invalid" type="email" name="email" required placeholder="mail@gmail.com">
+
+			<!-- выбор опции -->
+			<br>
+			<div>
+				<input type="checkbox" id="autoRegistration">
+				<label class="checkbox" for="autoRegistration">Автоматическая регистрация</label>
+
+				<div>
+					<input class="input" type="password" name="password" required placeholder="Password">
+					<input class="input input--invalid" type="password" name="passwordRep" required placeholder="Repeat password">
+				</div>
+			</div>
+			<br>
+
+			<input class="input" type="text" name="type" list="typesOfAnimals3" placeholder="Вид животного">
+			<datalist id="typesOfAnimals3">
+				<option value="кошка"></option>
+				<option value="собака"></option>
+				<option value="хорёк"></option>
+				<option value="енот"></option>
+			</datalist>
+
+			<!-- фото -->
+			<div class="form__imgs">
+				<label class="input-file">
+					<input type="file" name="img1" accept="image/*">↓ Загрузить файл...
+				</label>
+				<label class="input-file">
+					<input type="file" name="img2" accept="image/*">↓ Загрузить файл...
+				</label>
+				<label class="input-file">
+					<input type="file" name="img3" accept="image/*">↓ Загрузить файл...
+				</label>
+			</div>
+
+			<textarea rows="4" class="input" type="text" name="description" list="typesOfAnimals3" placeholder="Доп. информация (описание обстоятельств, при которых было найдено животное, порода, кличка)"></textarea>
+			<input class="input" type="text" name="brand" placeholder="Клеймо (если есть)">
+
+			<select class="select" name="district">
+				<option disabled selected>Район</option>
+				<option value="d1">Дзержинский</option>
+				<option value="d2">Центральный</option>
+				<option value="d3">Промышленный</option>
+				<option value="d4">Ленинский</option>
+			</select>
+
+			<input class="input" type="date" name="date">
+
+			<label class="checkbox">
+				<input type="checkbox"> Я согласен на четотам
+			</label>
+
+			<button class="btn" type="submit">Регистрация</button>
+		</form>
+	</section>
+
+
+
+	<!-- Страница личного кабинета модератора -->
+	<section class="section section--transparent">
+		<h2 class="section__title">Найденные животные:</h2>
+
+		<form class="form form--block" action="" style="margin-bottom: 2em">
+			<select class="select" name="sort">
+				<option disabled selected>Сортировать</option>
+				<option value="date">По дате</option>
+				<option value="status">По статусу</option>
+			</select>
+			<button class="btn" type="submit">Поиск</button>
+		</form>
+
+		<div class="cards">
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<select class="select" name="status">
+						<option disabled selected>Статус</option>
+						<option value="active">Активно</option>
+						<option value="found">Найдено</option>
+						<option value="archive">В архиве</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://pa1.aminoapps.com/6381/7fdaf62de8381ffd7f891787e87badcc86707d73_00.gif" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<select class="select" name="status">
+						<option disabled selected>Статус</option>
+						<option value="active">Активно</option>
+						<option value="found">Найдено</option>
+						<option value="archive">В архиве</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31840-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Дзержинский</h3>
+					<p class="cards__text">Кошачий, 1234</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+					<select class="select" name="status">
+						<option disabled selected>Статус</option>
+						<option value="active">Активно</option>
+						<option value="found">Найдено</option>
+						<option value="archive">В архиве</option>
+					</select>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<!-- Страница с результатами поиска животных  -->
+	<section class="section section--transparent">
+		<h2 class="section__title">Результаты поиска:</h2>
+		<form class="form form--block" action="">
+			<input class="input" type="text" name="type" list="typesOfAnimals2" placeholder="Вид животного">
+			<datalist id="typesOfAnimals2">
+				<option value="кошка"></option>
+				<option value="собака"></option>
+				<option value="хорёк"></option>
+				<option value="енот"></option>
+			</datalist>
+			<select class="select" name="district">
+				<option disabled selected>Район</option>
+				<option value="d1">Дзержинский</option>
+				<option value="d2">Центральный</option>
+				<option value="d3">Промышленный</option>
+				<option value="d4">Ленинский</option>
+			</select>
+			<button class="btn">Поиск</button>
+		</form>
+
+		<div class="cards" style="margin: 2em 0">
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31833-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Кошка</h3>
+					<p class="cards__text">Клеймо 1234</p>
+					<p class="cards__text">Номер +7 123 456 78 90</p>
+					<p class="cards__text">Район Дзержинский</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31833-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Кошка</h3>
+					<p class="cards__text">Клеймо 1234</p>
+					<p class="cards__text">Номер +7 123 456 78 90</p>
+					<p class="cards__text">Район Дзержинский</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31833-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Кошка</h3>
+					<p class="cards__text">Клеймо 1234</p>
+					<p class="cards__text">Номер +7 123 456 78 90</p>
+					<p class="cards__text">Район Дзержинский</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<img class="cards__img" src="https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/78/31833-1000x830.jpg" alt="">
+				<div class="cards__content">
+					<h3 class="cards__title">Кошка</h3>
+					<p class="cards__text">Клеймо 1234</p>
+					<p class="cards__text">Номер +7 123 456 78 90</p>
+					<p class="cards__text">Район Дзержинский</p>
+					<time class="cards__date" datetime="2019-05-15">2019-05-15</time>
+				</div>
+			</div>
+
+		</div>
+
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				<li class="pagination__item"><a class="pagination__link" href="#">Previous</a></li>
+				<li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+				<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+				<li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+				<li class="pagination__item"><a class="pagination__link" href="#">Next</a></li>
+			</ul>
+		</nav>
+	</section>
+
+
+
+
+	<!-- Страница с карточкой найденного животного  -->
+	<section class="section">
+		<h2 class="section__title">Страница животного:</h2>
+		<div class="gallery">
+			<img src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="" class="gallery__item">
+			<img src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="" class="gallery__item">
+			<img src="https://pm1.aminoapps.com/6650/fe91259101acc3fa51458a68dee51a8ae09021b2_00.jpg" alt="" class="gallery__item">
+		</div>
+		<!-- <form action="" class="form form--block form--grid">
+			<p>Вид</p>
+			<span>Кот</span>
+
+			<p>Имя</p>
+			<span>Иван Иванович</span>
+
+			<p>Номер</p>
+			<span>+7 123 456 78 90</span>
+
+			<p>Email</p>
+			<span>mail@mail.com</span>
+
+			<p>Описание</p>
+			<span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aspernatur alias cum veritatis temporibus, cumque quisquam quaerat. A vero placeat, eligendi laborum illo quae dolor culpa nulla vel corporis voluptas.</span>
+
+			<p>Клеймо</p>
+			<span>1234</span>
+
+			<p>Район</p>
+			<span>Центральный</span>
+
+			<p>Дата</p>
+			<span>2019-05-15</span>
+		</form> -->
+
+		<table class="table">
+			<tr>
+				<th>Вид</th>
+				<td>Кот</td>
+			</tr>
+			<tr>
+				<th>Имя</th>
+				<td>Иван Иванович</td>
+			</tr>
+			<tr>
+				<th>Номер</th>
+				<td>+7 123 456 78 90</td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td>mail@mail.com</td>
+			</tr>
+			<tr>
+				<th>Описание</th>
+				<td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aspernatur alias cum veritatis temporibus, cumque quisquam quaerat. A vero placeat, eligendi laborum illo quae dolor culpa nulla vel corporis voluptas.</td>
+			</tr>
+			<tr>
+				<th>Клеймо</th>
+				<td>1234</td>
+			</tr>
+			<tr>
+				<th>Район</th>
+				<td>Центральный</td>
+			</tr>
+			<tr>
+				<th>Дата</th>
+				<td>2019-05-15</td>
+			</tr>
+		</table>
+	</section>
+	
+</main>
+
+
+
+<footer class="footer">
+	<div class="footer__contacts">
+		<a href="tel:+88001234567">8 (800)123-45-67</a>
+		<a href="mailto:mail@newlife.ru">mail@newlife.ru</a>
+	</div>
+	<nav class="nav footer__nav">
+		<ul class="nav__list">
+			<li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Регистрация</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Авторизация</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Личный кабинет</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Найдено животное</a></li>
+			<li class="nav__item"><a href="#" class="nav__link">Поиск</a></li>
+		</ul>
+	</nav>
+</footer>
+
+</body>
+</html>

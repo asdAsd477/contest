@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        svg {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <svg id="svg" width="600" height="400"></svg>
+
+
+    <!-- <input type="color" id="color"> -->
+    <select id="color">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+    </select>
+
+
+    <script>
+        let mouse = {x: 0, y: 0, dn: false};
+        svg.onmousedown = e => {
+            mouse = {x: e.offsetX, y: e.offsetY, dn: true};
+        }
+        onmouseup = () => {
+            mouse.dn = false;
+        }
+        svg.onmousemove = e => {
+            if(Math.hypot(mouse.x - e.offsetX, mouse.y - e.offsetY) > 10 && mouse.dn) {
+                svg.insertAdjacentHTML('beforeend', `<line x1=${mouse.x} y1=${mouse.y} x2=${e.offsetX} y2=${e.offsetY} stroke="${color.value}" stroke-width="5" stroke-linecap="round" />`);
+                mouse.x = e.offsetX;
+                mouse.y = e.offsetY;
+            }
+        }
+    </script>
+</body>
+</html>

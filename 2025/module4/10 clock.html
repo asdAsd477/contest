@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            margin: 0;
+            height: 100vh;
+        }
+        svg {
+            /* border: 1px solid #000; */
+        }
+    </style>
+</head>
+<body>
+    <svg id="svg" width="400" height="400">
+        <circle cx="50%" cy="50%" r="150" stroke="black" stroke-width="5" fill="none" />
+
+        <line id="seconds" x1="50%" y1="50%" stroke="black" stroke-width="3" stroke-linecap="round" />
+        <line id="minutes" x1="50%" y1="50%" stroke="black" stroke-width="3" stroke-linecap="round" />
+        <line id="hours" x1="50%" y1="50%" stroke="black" stroke-width="3" stroke-linecap="round" />
+    </svg>
+    <script>
+        setInterval(() => {
+            let date = new Date;
+            let [s, m, h] = [date.getSeconds(), date.getMinutes(), date.getHours()];
+            s += date.getMilliseconds() / 1000; // Плавность
+
+            seconds.setAttribute('x2',  Math.sin(Math.PI*2 * s/60)*150 + 200);
+            seconds.setAttribute('y2', -Math.cos(Math.PI*2 * s/60)*150 + 200);
+            
+            minutes.setAttribute('x2',  Math.sin(Math.PI*2 * m/60)*100 + 200);
+            minutes.setAttribute('y2', -Math.cos(Math.PI*2 * m/60)*100 + 200);
+            
+            h = h + m/60 + s/3600; // Плавность
+            hours.setAttribute('x2',  Math.sin(Math.PI*2 * h/12)*50 + 200); // ТУТ ДЕЛЕНИЕ НА 12, а не на 24!!!
+            hours.setAttribute('y2', -Math.cos(Math.PI*2 * h/12)*50 + 200);
+        })
+    </script>
+</body>
+</html>
