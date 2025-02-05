@@ -58,3 +58,10 @@ py manage.py migrate
 
 # Модуль 4
 - Некоторые примеры в `/2024/module4/`
+
+
+
+# Примеры
+- Модуль 1: https://asdasd477.github.io/contest/2024/module1/
+- Спидтаски: https://asdasd477.github.io/contest/2024/module4/16%20circles.html
+- Спидтаски 2025: https://asdasd477.github.io/contest/2025/module4/6%20cube.html
